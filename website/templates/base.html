@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      crossorigin="anonymous"
+    />
+    <!--Bootstrap init(CJ)-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <!-- custom Main.css (CJ) -->
+    <link rel="stylesheet" href="{{url_for('static',filename='main.css')}}">
+
+
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+
+    <title>{% block title %}{{title}}{% endblock %}</title>
+
+
+  </head>
+  <body style="background-color: #DDF2FD;">
+
+    <!--NAVBAR-->
+    <nav class="navbar navbar-expand-lg" style="background-color: #427D9D ;">
+        <div class="container-fluid">
+            
+            <a class="navbar-brand" href="/">
+                <img src="{{ url_for('static', filename='img/gymjam2.png') }}" height="35" width="211">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+
+                    <!--DROPDOWN-->
+                    <div class="dropdown" 
+                    style="background-color: #164863;
+            
+                    border-radius: 4px solid; border-radius: 10px; ">
+                    
+                        <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"
+                        style="color: #9EDDFF;">
+                          Exercises
+                        </button>
+                        <ul class="dropdown-menu" style="background-color: #DDF2FD; border-radius: 4px solid; border-radius: 10px; ">
+                          <li><a class="dropdown-item" href="/arms">Arms</a></li>
+                          <li><a class="dropdown-item" href="/core">Core</a></li>
+                          <li><a class="dropdown-item" href="/legs">Legs</a></li>
+                          <li><a class="dropdown-item" href="/yoga">Yoga</a></li>   
+                        </ul>
+                      </div>
+
+
+                    <li class="nav-item">
+                        <a class="nav-link active" 
+                        
+                        style="background-color: #164863; 
+                        color: #9EDDFF; 
+                        border-radius: 4px solid; border-radius: 10px; 
+                        right: 100px;
+                        margin-left: 10px" 
+                        
+                        href="/about">About</a>
+                    </li>
+
+                    
+
+                </ul>
+            </div>
+        </div>
+
+
+        {% if session.loggedin %}
+
+        <ul class="navbar-nav justify-content-end">
+            <li class="nav-item">
+            
+                <a class="nav-link active" aria-current="page" 
+                style="background-color: #164863; 
+                            color: #9EDDFF; 
+                            border-radius: 4px solid; border-radius: 10px;
+                            margin-left: 10px"
+                href="/account">Account</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" 
+                style="background-color: #164863; 
+                            color: #9EDDFF; 
+                            border-radius: 4px solid; border-radius: 10px; 
+                            margin-left: 10px"
+                            
+                            href="/logout">Logout</a>
+
+    <ul class="navbar-nav justify-content-end">
+        <li class="nav-item">
+            
+            {% else %}
+
+<li class="nav-item">
+    <a class="nav-link active" style="background-color: #164863; 
+              color: #9EDDFF;
+              border-radius: 10px; 
+              margin-left: 10px;
+              height: 30px;
+              width: 70px;
+              text-align: center;
+              "
+              
+              href="/sign-up">SignUp</a>
+</li>
+<li class="nav-item">
+    <a class="nav-link active" style="background-color: #164863; 
+              color: #9EDDFF; 
+              border-radius: 10px; 
+              margin-left: 10px;
+              height: 30px;
+              width: 70px;
+              text-align: center;" 
+              
+              href="/login">Login</a>
+</li>
+        {% endif %}
+    </ul>
+    </nav>
+
+    {% with messages = get_flashed_messages(with_categories=true) %} 
+    {% if messages %} 
+        {% for category, message in messages %} 
+            {% if category =='error' %}
+                <div class="alert alert-danger alter-dismissable fade show" role="alert">
+                {{ message }}
+                <button type="button" class="close" data-dismiss="alert">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                </div>
+            {% else %}
+                <div class="alert alert-success alter-dismissable fade show" role="alert">
+                {{ message }}
+                <button type="button" class="close" data-dismiss="alert">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                </div>
+            {% endif %} 
+        {% endfor %} 
+    {% endif %}
+    {% endwith %}
+    
+
+   
+    <div class="container">{% block content %} {% endblock %}</div>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
+        integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+    <script
+        src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"
+    ></script>
+    
+    <!-- EXTRA (CJ) -->
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"
+    ></script>
+    <script
+        src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"
+
+      
+    ></script>
+
+    <div class="footer">
+        <br>
+        <div class="rectangular-block1"></div>
+    </div>
+
+  </body>
+</html>

@@ -1,0 +1,94 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<br>
+<br>
+<div class="badge mx-auto d-flex justify-content-center">
+  <span class="badge">Yoga</span>
+</div>
+<br>
+<br>
+
+<div class="armspage">
+<!--Bow Pose-->
+  <div class="card mb-3">
+      <div class="card-body">
+          <h5 class="card-title">Bow Pose</h5>
+          <p class="card-text">Stand with your feet shoulder width apart. flex your knees and hips and sit back
+             into the squat while lowering your body. Continue down to full depth. Return to starting position.
+          </p>
+      </div>
+      <video controls class="card-img-top">
+          <source src="{{ url_for('static', filename='img/yogabow.mp4') }}" type="video/mp4">
+      </video>
+  </div>
+</div>
+
+  <div class="armspage">  
+  <!--CHILD POSE-->
+  <div class="card mb-3">
+    <div class="card-body">
+        <h5 class="card-title">Child Pose</h5>
+        <p class="card-text"> Begin in a tabletop position with your hands and knees on the ground. Sit back onto 
+          your heels and extend your arms out in front of you. Rest your forehead on the ground. Hold for a few 
+          breaths and then release.
+        </p>
+    </div>
+    <video controls class="card-img-top">
+        <source src="{{ url_for('static', filename='img/yogachildpose.mp4') }}" type="video/mp4">
+    </video>
+  </div>
+</div>
+
+  <div class="armspage">
+  <!--COBRA POSE-->
+  <div class="card mb-3">
+    <div class="card-body">
+        <h5 class="card-title">Cobra Pose</h5>
+        <p class="card-text">Start prone, hands under shoulders. Inhale, lift chest, arch back. 
+          Elongate neck, gaze up. Breathe, hold. Release, exhale.</p>
+    </div>
+    <video controls class="card-img-top">
+        <source src="{{ url_for('static', filename='img/yogacobra.mp4') }}" type="video/mp4">
+    </video>
+  </div>
+</div>
+
+<div class="armspage">
+  <!--DOG POSE-->
+  <div class="card mb-3">
+    <div class="card-body">
+        <h5 class="card-title">Dog Pose</h5>
+        <p class="card-text">Begin on your hands and knees with your hands shoulder-width apart and your knees 
+          hip-width apart.Spread your fingers wide and press down into your palms, making sure that your fingers 
+          are evenly spaced and facing forward.Tuck your toes under and lift your knees off the ground, 
+          straightening your legs as much as possible.
+          
+        </p>
+    </div>
+    <video controls class="card-img-top">
+        <source src="{{ url_for('static', filename='img/yogadog.mp4') }}" type="video/mp4">
+    </video>
+ </div>
+</div>
+
+<div class="armspage">
+  <!--Vajrasana-->
+  <div class="card mb-3">
+    <div class="card-body">
+        <h5 class="card-title">Vajrasana</h5>
+        <p class="card-text"> Begin in a kneeling position with your knees together and your shins and feet on the 
+          floor. Sit back on your heels and place your palms face down on your thighs, with your fingers pointing 
+          towards your knees. Relax your shoulders and take deep breaths.
+        </p>
+    </div>
+    <video controls class="card-img-top">
+        <source src="{{ url_for('static', filename='img/yogavajrasana.mp4') }}" type="video/mp4">
+        
+    </video>
+  </div>
+</div>
+
+
+{% endblock content %}

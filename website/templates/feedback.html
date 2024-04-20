@@ -1,0 +1,32 @@
+{% extends "base.html" %} {% block title %}GymJam |Feedback{% endblock %}
+{% block content %}
+
+
+<body>
+    <br>
+    <center><img src="{{ url_for('static',filename='img/gymjam2.png')}}"></center>
+    <hr>
+    <hr>
+    <h2>
+        <center><b>Please drop your feedbacks here!</b></center>
+    </h2>
+    <hr>
+    <hr>
+    <br>
+    <br>
+    <form method="POST">
+        <center><textarea id="feedback" name="feedback" rows="9" cols="100" placeholder="enter here"></textarea><br><br>
+            <div class="btn3">
+                <button type="submit" class="btn btn-outline-dark">Submit</button>
+            </div>
+            
+        </center>
+    </form>
+
+<br>
+<br>
+<br>
+<br>
+
+</body>
+{% endblock content %}

@@ -1,0 +1,91 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<br>
+<br>
+<div class="badge mx-auto d-flex justify-content-center">
+  <span class="badge">Core</span>
+</div>
+<br>
+<br>
+
+<div class="armspage">
+<!--LEG RAISES-->
+  <div class="card mb-3">
+      <div class="card-body">
+          <h5 class="card-title">Laying Leg Raises</h5>
+          <p class="card-text">Lay on your back with your arms palms down on either side. 
+            Keep your legs together and as straight as possible. Slowly raise your legs to
+             a 90° angle, pause at this position, or as high as you can reach your legs, and then slowly lower your legs back down.
+          </p>
+      </div>
+      <video controls class="card-img-top">
+          <source src="{{ url_for('static', filename='img/corelegraises.mp4') }}" type="video/mp4">
+      </video>
+  </div>
+</div>
+
+<div class="armspage">
+  <!--Crunches-->
+  <div class="card mb-3">
+    <div class="card-body">
+        <h5 class="card-title">Crunches</h5>
+        <p class="card-text">Lay flat on your back with your knees bent and your feet flat on the ground, about a foot from your lower back.
+          Place your fingertips on your temples with your palms facing out. Draw your belly into the base of your spine to engage the muscles,
+          then raise your head and shoulders off the floor. Return to starting position and repeat.
+        </p>
+    </div>
+    <video controls class="card-img-top">
+        <source src="{{ url_for('static', filename='img/corecrunches.mp4') }}" type="video/mp4">
+    </video>
+  </div>
+</div>
+
+  <div class="armspage">
+  <!--Forearm Plank-->
+  <div class="card mb-3">
+    <div class="card-body">
+        <h5 class="card-title">Forearm Plank</h5>
+        <p class="card-text">Place forearms on the ground with your elbows bent at a 90°angle aligned beneath your shoulders, with your arms 
+          parallel at shoulder-width. Your feet should be together, with only your toes touching the floor. Lift your belly off the floor and
+          form a straight line from your heels to the crown of your head and hold.</p>
+    </div>
+    <video controls class="card-img-top">
+        <source src="{{ url_for('static', filename='img/coreplank.mp4') }}" type="video/mp4">
+    </video>
+  </div>
+</div>
+
+<div class="armspage">
+  <!--Mountain Climber-->
+  <div class="card mb-3">
+    <div class="card-body">
+        <h5 class="card-title">Mountain Climber</h5>
+        <p class="card-text">To perform a bodyweight mountain climber, start in a plank position with your hands placed directly under your 
+          shoulders. Bring your right knee towards your chest, keeping your foot close to your hand. Quickly switch legs, bringing your left
+          knee towards your chest. Continue this movement, alternating legs, at a quick pace for a set amount of time or repetitions.</p>
+    </div>
+    <video controls class="card-img-top">
+        <source src="{{ url_for('static', filename='img/armhammercurl.mp4') }}" type="video/mp4">
+    </video>
+ </div>
+</div>
+
+<div class="armspage">
+  <!--Dumbbell Russian Twist-->
+  <div class="card mb-3">
+    <div class="card-body">
+        <h5 class="card-title">Dumbbell Russian Twist</h5>
+        <p class="card-text">Sit on the floor and flex your knees and hips to a 90 degree angle. Your feet should be hovering off the ground. 
+          (If that's too hard start with heels on the floor) Rotate your upper spine to engage your obliques.
+        </p>
+    </div>
+    <video controls class="card-img-top">
+        <source src="{{ url_for('static', filename='img/corerussiantwist.mp4') }}" type="video/mp4">
+        
+    </video>
+  </div>
+</div>
+
+{% endblock content %}

@@ -1,0 +1,261 @@
+/* KEYFRAMES */
+@keyframes slideInLeft {
+    from{
+        transform:translateX(-300px);
+    }
+
+    to{
+        transform:translateX(0);
+    }
+}
+
+
+/* CSS */
+.carousel {
+    top: 0px;
+    width: 100%;
+    margin: 5px; 
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+    transition-delay: 0s;
+    box-shadow: 0px 4px 8px 0px rgb(22,72,99);
+}
+
+.footer {
+    position: relative;
+
+}
+.rectangular-block1 {
+    position: absolute;
+    bottom: 0;
+    width: 100% ;     
+    height: 100px;   
+    background-color: #427D9D; 
+    border: 2px solid #164863;  
+
+    
+ 
+}
+
+/* THIS FOR CHANGING WIDTH OF CARDS IN ARM?LEGS?CORE?YOGA PAGE*/
+.armspage{
+    max-width: 1000px;
+    margin: 0 auto;
+    width: 800px;
+
+}
+
+
+.nav-item {
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+    transition-delay: 0s;
+}
+.nav-item:hover{
+    transform: translateY(-5px);
+    background-color: var(--clr-accent);
+    color: var(--clr-light); 
+}
+
+.badge {
+    height: 90px;
+    width: 270px;
+    font-size: 100px;
+    color: #164863;
+    background-color: #DDF2FD;
+    font-family: 'Roboto', sans-serif;
+    animation: slideInLeft 0.75s ease-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.dropdown-item {
+    background-color: #DDF2FD;
+}
+.dropdown-menu .dropdown-item:hover {
+    background-color: #64CCC5; 
+}
+
+.form-group {
+    box-shadow: 0px 2px 0px 0px #164863;
+}
+
+
+/* THE CARDS IN HOMEPAGE*/
+.grid {
+    display: grid;
+    width: 105rem;
+    grid-gap: 6rem;
+    grid-template-columns: repeat(auto-fit,minmax(30rem, 1fr));
+    align-items: start;
+    
+
+}
+.card {
+    background-color: #9BBEC8;
+}
+.grid-item {
+    background-color: #2d30c9;
+    border-radius: 0.4rem;
+    overflow: hidden;
+    box-shadow: 0px 4px 8px 0px rgb(22,72,99);
+    cursor: pointer;
+    transition: 0.2s;
+}
+.grid-item:hover {
+    transform: translateY(-0.5%);
+    box-shadow: 0 4rem 8rem  rgba(22,72,99);
+}
+
+.card-img {
+    display: black;
+    width: 100%;
+    height: 20rem;
+    object-fit:cover;
+}
+
+.card-content {
+    padding: 3rem;
+}
+
+.card-header {
+    font-size: 3rem;
+    font-weight: 500;
+    color: #232D3F;
+    margin-bottom: 1.5rem;
+}
+
+.card-text {
+    font-size: 1.6rem;
+    letter-spacing: 0.1rem;
+    line-height:1.7;
+    color: #04364A;
+    margin-bottom:2.5rem;
+}
+
+.card-btn {
+    display: block;
+    size: 0.2rem;
+    width: 90%;
+    padding: 1rem;
+    font-size: 2rem;
+    text-align: center;
+    color: #04364A;
+    background-color: #DDF2FD;
+    border-radius: 0.4rem;
+    transition: 0.2s;
+    cursor: pointer;
+    letter-spacing: 0.1rem;
+}
+
+.card-btn span {
+    margin-left: 1rem;
+    transition: 0.2s;
+}
+
+.card-btn:hover,
+.card-btn:active span {
+    margin-left: 1.5rem;
+    background-color: #008170;
+}
+
+@media only screen and (max-width: 60em) {
+body {
+    padding: 3rem;
+}
+
+.grid {
+    grid-gap: 3rem;
+}
+}
+
+.btn1 {
+    transition-duration: 0.2s;
+    transition-timing-function: ease;
+    transition-delay: 0s;
+    background: #DDF2FD;
+    color: #164863;
+    border-radius: 4px solid;
+    border-radius: 10px; 
+    height: 40px;
+    width: 100px;
+
+}
+.btn1:hover {
+    transform: translateY(-5px);
+    background-color: #427D9D;
+    color: #DDF2FD;
+    box-shadow: 0px 8px 10px 0px #164863
+
+}
+
+.btn2 {
+    transition-duration: 0.2s;
+    transition-timing-function: ease;
+    transition-delay: 0s;
+    background: #DDF2FD;
+    color: #164863;
+    border-radius: 4px solid;
+    border-radius: 10px;
+    width: 230px;
+
+}
+
+.btn2:hover {
+    transform: translateY(-5px);
+    background-color: #427D9D;
+    color: #DDF2FD;
+    box-shadow: 0px 8px 10px 0px #164863
+}
+
+
+.btn3 {
+    transition-duration: 0.2s;
+    transition-timing-function: ease;
+    transition-delay: 0s;
+    background: #DDF2FD;
+    color: #164863;
+    border-radius: 4px solid;
+    border-radius: 10px;
+    width: 80px;
+
+}
+
+.btn3:hover {
+    transform: translateY(-5px);
+    background-color: #427D9D;
+    color: #DDF2FD;
+    box-shadow: 0px 8px 10px 0px #164863
+}
+
+
+.btn4 {
+    transition-duration: 0.2s;
+    transition-timing-function: ease;
+    transition-delay: 0s;
+    background: #DDF2FD;
+    color: #164863;
+    border-radius: 4px solid;
+    border-radius: 10px;
+    height: 30px;
+    width: 80px;
+
+}
+
+.btn4:hover {
+    transform: translateY(-5px);
+    background-color: #427D9D;
+    color: #DDF2FD;
+    box-shadow: 0px 8px 10px 0px #164863
+}
+
+
+
+
+.content {
+    font-family: 'Roboto', sans-serif;
+}
+
+

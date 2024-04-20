@@ -1,0 +1,94 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<br>
+<br>
+<div class="badge mx-auto d-flex justify-content-center">
+  <span class="badge">Legs</span>
+</div>
+<br>
+<br>
+
+<div class="armspage">
+<!--SQUAT-->
+  <div class="card mb-3">
+      <div class="card-body">
+          <h5 class="card-title">Bodyweight Squat</h5>
+          <p class="card-text">Stand with your feet shoulder width apart. flex your knees and hips and sit back into the squat while lowering
+             your body. Continue down to full depth. Return to starting position.
+          </p>
+      </div>
+      <video controls class="card-img-top">
+          <source src="{{ url_for('static', filename='img/legssquat.mp4') }}" type="video/mp4">
+      </video>
+  </div>
+</div>
+
+  <div class="armspage">  
+  <!--LUNGES-->
+  <div class="card mb-3">
+    <div class="card-body">
+        <h5 class="card-title">Dumbbell Forward Lunge</h5>
+        <p class="card-text">Stand with your feet hip-width apart and hold a dumbbell in each hand with your palms facing each other.
+          Take a big step forward with your right foot, lowering your hips until your right thigh is parallel to the ground and your 
+          left knee is hovering just above the floor. Push through your right heel to straighten your right leg and return to the starting position.
+        </p>
+    </div>
+    <video controls class="card-img-top">
+        <source src="{{ url_for('static', filename='img/leglunge.mp4') }}" type="video/mp4">
+    </video>
+  </div>
+</div>
+
+  <div class="armspage">
+  <!--CALF RAISES-->
+  <div class="card mb-3">
+    <div class="card-body">
+        <h5 class="card-title">Calf Raises</h5>
+        <p class="card-text">Balance on the balls of your feet on the platform or plates, leaning forward to use the wall to assist with balance.
+          Lower the heels of your feet towards the ground and pause, then push through the balls of your feet like you are standing tip toe, 
+          pausing at the apex of the motion.</p>
+    </div>
+    <video controls class="card-img-top">
+        <source src="{{ url_for('static', filename='img/legraise.mp4') }}" type="video/mp4">
+    </video>
+  </div>
+</div>
+
+<div class="armspage">
+  <!--BARBELL SQUAT-->
+  <div class="card mb-3">
+    <div class="card-body">
+        <h5 class="card-title">Barbell Squat</h5>
+        <p class="card-text">
+          Stand with your feet shoulder-width apart. Maintain the natural arch in your back, squeezing your shoulder blades and raising your chest.
+          Grip the bar across your shoulders and support it on your upper back. Unwrack the bar by straightening your legs, and take a step back.
+          Bend your knees as you lower the weight without altering the form of your back until your hips are below your knees.Raise the bar back 
+          to starting position, lift with your legs and exhale at the top.
+        </p>
+    </div>
+    <video controls class="card-img-top">
+        <source src="{{ url_for('static', filename='img/legbarbsquat.mp4') }}" type="video/mp4">
+    </video>
+ </div>
+</div>
+
+<div class="armspage">
+  <!--BRIDGE-->
+  <div class="card mb-3">
+    <div class="card-body">
+        <h5 class="card-title">Dumbbell Glute Bridge</h5>
+        <p class="card-text">Lay flat on the ground with both feet planted. Make sure you keep your heels glued to the floor.
+          Place the dumbbell on your hips. Push your hips toward the ceiling until you feel your glutes contract.Then return to the floor.
+        </p>
+    </div>
+    <video controls class="card-img-top">
+        <source src="{{ url_for('static', filename='img/legglutebridge.mp4') }}" type="video/mp4">
+        
+    </video>
+  </div>
+</div>
+
+
+{% endblock content %}

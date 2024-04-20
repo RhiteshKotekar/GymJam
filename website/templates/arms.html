@@ -1,0 +1,87 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<br>
+<br>
+<div class="badge mx-auto d-flex justify-content-center">
+  <span class="badge">Arms</span>
+</div>
+<br>
+<br>
+
+<div class="content">
+  <div class="armspage">
+<!--PULL UPS-->
+  <div class="card mb-3">
+      <div class="card-body">
+          <h5 class="card-title">Pull Ups</h5>
+          <p class="card-text">Grab the bar shoulder width apart with a supinated grip (palms facing you).
+            With your body hanging and arms fully extended, pull yourself up until your chin is past the bar.
+          </p>
+      </div>
+      <video controls class="card-img-top">
+          <source src="{{ url_for('static', filename='img/armpullup.mp4') }}" type="video/mp4">
+      </video>
+  </div>
+</div>
+
+  <div class="armspage">  
+  <!--DUMBELL CURLS-->
+  <div class="card mb-3">
+    <div class="card-body">
+        <h5 class="card-title">Dumbbell Curl</h5>
+        <p class="card-text">Stand up straight with a dumbbell in each hand at arm's length. 
+          Raise one dumbbell and twist your forearm until it is vertical and your palm faces the shoulder.</p>
+    </div>
+    <video controls class="card-img-top">
+        <source src="{{ url_for('static', filename='img/armcurl.mp4') }}" type="video/mp4">
+    </video>
+  </div>
+</div>
+
+  <div class="armspage">
+  <!--DUMBELL FRONT RAISERS-->
+  <div class="card mb-3">
+    <div class="card-body">
+        <h5 class="card-title">Dumbell Front Raise</h5>
+        <p class="card-text">Raise the two dumbbells with your elbows being fully extended until the dumbbells are eye level.</p>
+    </div>
+    <video controls class="card-img-top">
+        <source src="{{ url_for('static', filename='img/armfrontraise.mp4') }}" type="video/mp4">
+    </video>
+  </div>
+</div>
+
+<div class="armspage">
+  <!--HAMMERHEAD CURLS-->
+  <div class="card mb-3">
+    <div class="card-body">
+        <h5 class="card-title">Dumbbell Hammer Curl</h5>
+        <p class="card-text">Hold the dumbbells with a neutral grip (thumbs facing the ceiling). 
+          Slowly lift the dumbbell up to chest height</p>
+    </div>
+    <video controls class="card-img-top">
+        <source src="{{ url_for('static', filename='img/armhammercurl.mp4') }}" type="video/mp4">
+    </video>
+ </div>
+</div>
+
+<div class="armspage">
+  <!--SEATED LIFT-->
+  <div class="card mb-3">
+    <div class="card-body">
+        <h5 class="card-title">Dumbbell Seated Overhead Press</h5>
+        <p class="card-text">Sit on a bench with back support. Raise the dumbbells to shoulder height with your palms forward.
+          Raise the dumbbells upwards and pause at the contracted position.
+        </p>
+    </div>
+    <video controls class="card-img-top">
+        <source src="{{ url_for('static', filename='img/armseatedlift.mp4') }}" type="video/mp4">
+        
+    </video>
+  </div>
+</div>
+
+</div>
+
+{% endblock content %}

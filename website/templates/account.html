@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<p>
+    <ul class="list-group">
+    <li class="list-group-item active" aria-current="true" style="background-color: #164863">username</li>
+    <li class="list-group-item" style="background-color: #A6F6FF;">
+        {% if username %}
+        {{username[0]}}
+        {% endif %}
+    </li>
+  </ul>
+</p>
+
+<p>
+    <ul class="list-group">
+    <li class="list-group-item active" aria-current="true" style="background-color: #164863">email</li>
+    <li class="list-group-item"style="background-color: #A6F6FF;" >
+        {% if username %}
+        {{username[1]}}
+        {% endif %}
+    </li>
+  </ul>
+</p>
+
+<div class="btn2">
+  <a href="/feedback" class="btn btn-outline-dark btn-lg" role="button">GIVE YOUR FEEDBACK</a>
+</div>
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+{% endblock content %}  
